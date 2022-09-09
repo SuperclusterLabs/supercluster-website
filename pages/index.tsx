@@ -30,6 +30,9 @@ const Home: NextPage = () => {
           </p>
         </div>
       </main>
+      <footer className="dark:bg-gray-900 py-10 text-center text-slate-400">
+        © Supercluster Labs
+      </footer>
     </div>
   );
 };
