@@ -41,40 +41,45 @@ const Home: NextPage = () => {
           </p>
           <Image src={headerImage} alt="Image of supernova in space" />
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="border rounded-2xl border-solid border-gray-500 p-6">
-            <h3>Built on IPFS</h3>
-            <p>
+        <section className="md:container md:mx-auto grid grid-cols-2 gap-4">
+          <div className="border rounded-3xl border-solid border-gray-500 p-6">
+            <h3 className="text-2xl">Built on IPFS</h3>
+            <p className="text-slate-400 mt-4">
               All content is pinned and served by the IPFS network, ensuring
               maximum decentralization.
             </p>
           </div>
-          <div className="border rounded-2xl border-solid border-gray-500 p-6">
-            <h3>NFT access control</h3>
-            <p>
+          <div className="border rounded-3xl border-solid border-gray-500 p-6">
+            <h3 className="text-2xl">NFT access control</h3>
+            <p className="text-slate-400 mt-4">
               Create custom access controls for your team members using NFTs on
               Polygon.
             </p>
           </div>
-          <div className="border rounded-2xl border-solid border-gray-500 p-6">
-            <h3>Real-time content</h3>
-            <p>
+          <div className="border rounded-3xl border-solid border-gray-500 p-6">
+            <h3 className="text-2xl">Real-time content</h3>
+            <p className="text-slate-400 mt-4">
               All your team members receive real-time updates as soon as new
               content is shared.
             </p>
           </div>
-          <div className="border rounded-2xl border-solid border-gray-500 p-6">
-            <h3>Use your web3 identity</h3>
-            <p>
+          <div className="border rounded-3xl border-solid border-gray-500 p-6">
+            <h3 className="text-2xl">Use your web3 identity</h3>
+            <p className="text-slate-400 mt-4">
               Login with your web3 wallet. Share files directly using your team
-              member’s addresses.
+              member&apos;s addresses.
             </p>
           </div>
-        </div>
-        <section>
-          <h4>How it works</h4>
-          <div className="flex">
-            <div>
+        </section>
+        <section className="md:container md:mx-auto mt-12 mb-9">
+          <h4 className="text-xl text-yellow-400 font-bold text-center">
+            How it works
+          </h4>
+          <div className="columns-3">
+            <div className="p-7 bg-gray-800 rounded-3xl">
+              <div>
+                <h1>1</h1>
+              </div>
               <h1>Teams get created</h1>
               <p>
                 Teams within a DAO create their own group with specific settings
@@ -82,13 +87,19 @@ const Home: NextPage = () => {
               <p>Invites are sent out via ENS / ETH address</p>
               <p>Access control dictated by NFT ownership</p>
             </div>
-            <div>
+            <div className="p-7 bg-gray-800 rounded-3xl">
+              <div>
+                <h1>2</h1>
+              </div>
               <h1>Files get shared</h1>
               <p>All files shared are pinned to the IPFS network</p>
               <p>Users are notified of new uploaded files via XMTP</p>
               <p>New files are automatically pinned to IPFS by members</p>
             </div>
-            <div>
+            <div className="p-7 bg-gray-800 rounded-3xl">
+              <div>
+                <h1>3</h1>
+              </div>
               <h1>Get incentivized</h1>
               <p>DAOs have full control over their incentive structures</p>
               <p>
