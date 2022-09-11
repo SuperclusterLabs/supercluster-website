@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import superclusterLogotype from "../public/supercluster-logotype.svg";
 import headerImage from "../public/headerImage.jpg";
-import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -75,34 +74,46 @@ const Home: NextPage = () => {
           <h4 className="text-xl text-yellow-400 font-bold text-center">
             How it works
           </h4>
-          <div className="columns-3">
+          <div className="mt-8 columns-3">
             <div className="p-7 bg-gray-800 rounded-3xl">
-              <div>
-                <h1>1</h1>
+              <div className="heading-number text-center mx-auto">
+                <h1 className="font-bold text-2xl text-emerald-500">1</h1>
               </div>
-              <h1>Teams get created</h1>
-              <p>
+              <h1 className="text-center font-bold text-2xl my-4">
+                Teams get created
+              </h1>
+              <p className="mb-6">
                 Teams within a DAO create their own group with specific settings
               </p>
-              <p>Invites are sent out via ENS / ETH address</p>
+              <p className="mb-6">Invites are sent out via ENS / ETH address</p>
               <p>Access control dictated by NFT ownership</p>
             </div>
             <div className="p-7 bg-gray-800 rounded-3xl">
-              <div>
-                <h1>2</h1>
+              <div className="heading-number text-center mx-auto">
+                <h1 className="font-bold text-2xl text-emerald-500">2</h1>
               </div>
-              <h1>Files get shared</h1>
-              <p>All files shared are pinned to the IPFS network</p>
-              <p>Users are notified of new uploaded files via XMTP</p>
+              <h1 className="text-center font-bold text-2xl my-4">
+                Files get shared
+              </h1>
+              <p className="mb-6">
+                All files shared are pinned to the IPFS network
+              </p>
+              <p className="mb-6">
+                Users are notified of new uploaded files via XMTP
+              </p>
               <p>New files are automatically pinned to IPFS by members</p>
             </div>
             <div className="p-7 bg-gray-800 rounded-3xl">
-              <div>
-                <h1>3</h1>
+              <div className="heading-number text-center mx-auto">
+                <h1 className="font-bold text-2xl text-emerald-500">3</h1>
               </div>
-              <h1>Get incentivized</h1>
-              <p>DAOs have full control over their incentive structures</p>
-              <p>
+              <h1 className="text-center font-bold text-2xl my-4">
+                Get incentivized
+              </h1>
+              <p className="mb-6">
+                DAOs have full control over their incentive structures
+              </p>
+              <p className="mb-6">
                 Generate reports on each team member&apos;s network activity
               </p>
               <p>DAOs decide how members are rewarded</p>
@@ -110,7 +121,9 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section>
-          <h4>Our partners</h4>
+          <h4 className="text-xl text-yellow-400 font-bold text-center">
+            Our partners
+          </h4>
           <div>
             <h1>Bankless DAO</h1>
           </div>
@@ -122,7 +135,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section>
-          <h1>Interested?</h1>
+          <h1 className="text-5xl font-bold text-center">Interested?</h1>
         </section>
       </main>
       <footer className="dark:bg-gray-900 py-10 text-center text-slate-400">
