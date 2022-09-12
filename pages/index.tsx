@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import EmailForm from "../components/email_form"
 
 const Home: NextPage = () => {
   return (
@@ -28,6 +29,8 @@ const Home: NextPage = () => {
           <p className="text-2xl text-slate-400">
             More information coming soon!
           </p>
+          <br /><br /><br />
+          <EmailForm />
         </div>
       </main>
       <footer className="dark:bg-gray-900 py-10 text-center text-slate-400">
