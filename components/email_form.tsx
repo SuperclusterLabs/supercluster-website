@@ -8,7 +8,7 @@ export default class EmailForm extends React.Component {
   render() {
     return (
       <>
-        <p className="text-4xl">Subscribe for updates</p>
+        <p className="font-bold text-xl">Subscribe for updates</p>
         <br />
         <br />
         <form
