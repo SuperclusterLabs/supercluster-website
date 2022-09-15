@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         <Header />
         <section className="container max-w-screen-lg px-6 md:px-0">
           <section className="container mx-auto text-center">
-            <h1 className={"text-6xl md:text-7xl lg:text-9xl font-bold mb-12"}>
+            <h1 className={"text-5xl md:text-7xl lg:text-9xl font-bold mb-12"}>
               Decentralized file sharing.
             </h1>
             <h2 className={"text-3xl lg:text-6xl"}>Built for DAOs.</h2>
