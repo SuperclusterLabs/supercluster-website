@@ -5,6 +5,7 @@ import superclusterLogotype from "../public/supercluster-logotype.svg";
 import banklessLogo from "../public/banklessLogo.png";
 import pattern from "../public/pattern.png";
 
+import Header from "./components/header";
 import EmailForm from "./components/emailForm";
 
 const Home: NextPage = () => {
@@ -19,23 +20,17 @@ const Home: NextPage = () => {
       </Head>
 
       <main
-        className={"bg-repeat-space text-white h-full"}
+        className={"bg-repeat text-white"}
         style={{ backgroundImage: `url(${pattern.src})` }}
       >
-        <header className="flex justify-center py-5">
-          <Image
-            src={superclusterLogotype}
-            alt="Supercluster Logo"
-            height={24}
-          />
-        </header>
-        <section className="container lg:px-60">
-          <section className="flex flex-col p-12 text-center">
+        <Header />
+        <section className="container max-w-screen-lg px-6 md:px-0">
+          <section className="container mx-auto text-center">
             <h1 className={"text-6xl md:text-7xl lg:text-9xl font-bold mb-12"}>
               Decentralized file sharing.
             </h1>
-            <h2 className={"text-4xl lg:text-6xl"}>Built for DAOs.</h2>
-            <p className="my-12 text-xl text-slate-400 leading-relaxed">
+            <h2 className={"text-3xl lg:text-6xl"}>Built for DAOs.</h2>
+            <p className="my-12 text-xl text-slate-400 leading-relaxed px:inherit lg:px-20">
               Supercluster Files enables DAOs to share content between team
               members without having to rely on centralized parties.
             </p>
@@ -48,7 +43,7 @@ const Home: NextPage = () => {
               <span className="text-yellow-400">decentralized tools</span>.
             </p>
           </section>
-          <section className="md:container md:mx-auto grid grid-cols-2 gap-4">
+          <section className="grid grid-cols-2 gap-4 mt-12">
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
               <h3 className="text-2xl">Built on IPFS</h3>
               <p className="text-slate-400 mt-4">
@@ -82,8 +77,8 @@ const Home: NextPage = () => {
             <h4 className="text-xl text-yellow-400 font-bold text-center">
               How it works
             </h4>
-            <div className="flex gap-x-8 gap-y-8 mt-8">
-              <div className="p-7 bg-gray-800 rounded-3xl w-full">
+            <div className="columns-1 sm:columns-3 gap-8 space-y-8 mt-8">
+              <div className="p-7 bg-gray-800 rounded-3xl">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">1</h1>
                 </div>
@@ -99,7 +94,7 @@ const Home: NextPage = () => {
                 </p>
                 <p>Access control dictated by NFT ownership</p>
               </div>
-              <div className="p-7 bg-gray-800 rounded-3xl w-full">
+              <div className="p-7 bg-gray-800 rounded-3xl">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">2</h1>
                 </div>
@@ -114,7 +109,7 @@ const Home: NextPage = () => {
                 </p>
                 <p>New files are automatically pinned to IPFS by members</p>
               </div>
-              <div className="p-7 bg-gray-800 rounded-3xl w-full">
+              <div className="p-7 bg-gray-800 rounded-3xl">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">3</h1>
                 </div>
