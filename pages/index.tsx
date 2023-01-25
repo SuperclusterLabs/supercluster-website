@@ -1,13 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import superclusterLogotype from "../public/supercluster-logotype.svg";
-import banklessLogo from "../public/banklessLogo.png";
 
 import Header from "./components/header";
 import EmailForm from "./components/emailForm";
 import Button from "./components/button";
-import Partners from "./components/partners";
 
 const Home: NextPage = () => {
   return (
