@@ -3,10 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import superclusterLogotype from "../public/supercluster-logotype.svg";
 import banklessLogo from "../public/banklessLogo.png";
-import pattern from "../public/pattern.png";
 
 import Header from "./components/header";
 import EmailForm from "./components/emailForm";
+import Button from "./components/button";
+import Partners from "./components/partners";
 
 const Home: NextPage = () => {
   return (
@@ -20,19 +21,16 @@ const Home: NextPage = () => {
       </Head>
 
       <main
-        className={"bg-repeat text-white"}
-        style={{ backgroundImage: `url(${pattern.src})` }}
+        className={"bg-gradient-to-b from-[#1A253C] to-[#111827] text-white"}
       >
         <Header />
-        <section className="container max-w-screen-lg px-6 md:px-0">
-          <section className="container mx-auto text-center">
-            <h1 className={"text-5xl md:text-7xl lg:text-9xl font-bold mb-12"}>
-              Decentralized file sharing.
+        <section className="container max-w-screen-xl px-6 md:px-0">
+          <section className="container mx-auto">
+            <h1 className={"text-4xl md:text:6xl lg:text-8xl mb-12"}>
+              Decentralized file sharing is here.
             </h1>
-            <h2 className={"text-3xl lg:text-6xl"}>Built for DAOs.</h2>
-            <p className="my-12 text-xl text-slate-400 leading-relaxed px:inherit lg:px-20">
-              Supercluster Files enables DAOs to share content between team
-              members without having to rely on centralized parties.
+            <p className="my-6 text-2xl leading-relaxed px:inherit">
+              Supercluster Files enables decentralized teams to share content between members - using web3 tools.
             </p>
             <p className="text-2xl font-bold text-slate-400">
               Your{" "}
@@ -42,43 +40,60 @@ const Home: NextPage = () => {
               deserves{" "}
               <span className="text-yellow-400">decentralized tools</span>.
             </p>
+            <div>
+              <Button text="Sign up for early access" onClick={() => console.log("Hello")} primary />
+              <Button text="Join our Discord" onClick={() => console.log("Joining Discord")} primary={false} />
+            </div>
           </section>
-          <section className="grid grid-cols-2 gap-4 mt-12">
+          <section className="grid lg:grid-cols-3 gap-6 mt-12">
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
-              <h3 className="text-2xl">Built on IPFS</h3>
+              <h3 className="text-2xl">🌐 Built on IPFS</h3>
               <p className="text-slate-400 mt-4">
                 All content is pinned and served by the IPFS network, ensuring
                 maximum decentralization.
               </p>
             </div>
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
-              <h3 className="text-2xl">NFT access control</h3>
+              <h3 className="text-2xl">🔒 Custom access control</h3>
               <p className="text-slate-400 mt-4">
-                Create custom access controls for your team members using NFTs
-                on Polygon.
+                Create custom access controls for your team members using NFTs, DAO tokens, or just a list of addresses.
               </p>
             </div>
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
-              <h3 className="text-2xl">Real-time content</h3>
+              <h3 className="text-2xl">🔑 Use your web3 identity</h3>
+              <p className="text-slate-400 mt-4">
+                Login with your web3 wallet. Share files directly using your team member’s addresses.
+              </p>
+            </div>
+            <div className="border rounded-3xl border-solid border-gray-500 p-6">
+              <h3 className="text-2xl">✉️ Real-time updates</h3>
               <p className="text-slate-400 mt-4">
                 All your team members receive real-time updates as soon as new
                 content is shared.
               </p>
             </div>
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
-              <h3 className="text-2xl">Use your web3 identity</h3>
+              <h3 className="text-2xl">💻 Local-first</h3>
               <p className="text-slate-400 mt-4">
-                Login with your web3 wallet. Share files directly using your
-                team member&apos;s addresses.
+                All of your data is stored and shared directly from your local machine. Nothing is stored in the cloud, protecting your privacy.
+              </p>
+            </div>
+            <div className="border rounded-3xl border-solid border-gray-500 p-6">
+              <h3 className="text-2xl">⛔ Censorship resistant</h3>
+              <p className="text-slate-400 mt-4">
+                Your data is yours. You’re protected from having any data or content deleted at the platform level.
               </p>
             </div>
           </section>
           <section className="md:container md:mx-auto mt-12 mb-9">
-            <h4 className="text-xl text-yellow-400 font-bold text-center">
-              How it works
-            </h4>
-            <div className="columns-1 sm:columns-3 gap-8 space-y-8 mt-8">
-              <div className="p-7 bg-gray-800 rounded-3xl">
+            <div className="text-center">
+              <h4 className="text-2xl mb-4">
+                How it works
+              </h4>
+              <p className="text-slate-400"> Supercluster Files uses web3 native protocols under the hood </p>
+            </div>
+            <div className="grid lg:grid-cols-3 gap-6 mt-8 leading-relaxed">
+              <div className="p-7 bg-gray-800 rounded-3xl h-full flex flex-col">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">1</h1>
                 </div>
@@ -92,9 +107,9 @@ const Home: NextPage = () => {
                 <p className="mb-6">
                   Invites are sent out via ENS / ETH address
                 </p>
-                <p>Access control dictated by NFT ownership</p>
+                <p>Access control dictated by your custom access controls set up for your cluster</p>
               </div>
-              <div className="p-7 bg-gray-800 rounded-3xl">
+              <div className="p-7 bg-gray-800 rounded-3xl h-full flex flex-col">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">2</h1>
                 </div>
@@ -109,7 +124,7 @@ const Home: NextPage = () => {
                 </p>
                 <p>New files are automatically pinned to IPFS by members</p>
               </div>
-              <div className="p-7 bg-gray-800 rounded-3xl">
+              <div className="p-7 bg-gray-800 rounded-3xl h-full flex flex-col">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">3</h1>
                 </div>
@@ -126,24 +141,12 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <section className="md:container md:mx-auto mt-12 mb-4">
-            <h4 className="text-xl text-yellow-400 font-bold text-center mb-8">
-              Our partners
+          <div className="text-center">
+            <h4 className="text-2xl mb-4">
+              Partners
             </h4>
-            <div className="flex flex-col justify-center">
-              <div className="self-center">
-                <Image
-                  src={banklessLogo}
-                  alt="BanklessDAO Logo"
-                  height={207}
-                  width={271}
-                />
-              </div>
-              <h3 className="font-bold text-2xl text-center mt-2">
-                Bankless DAO
-              </h3>
-            </div>
-          </section>
+            <p className="text-slate-400"> Backed by the best in web3 </p>
+          </div>
           <section className="flex flex-col">
             <EmailForm />
           </section>
