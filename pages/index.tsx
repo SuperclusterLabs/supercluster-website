@@ -9,9 +9,12 @@ import ipfsLogo from "../public/ipfs-white.png";
 import banklessLogo from "../public/bankless-white.svg";
 import xmtpLogo from "../public/xmtp-white.svg";
 import protocollabsLogo from "../public/protocollabs-white.svg";
+import mastodonLogo from "../public/Mastodon.svg";
+import twitterLogo from "../public/Twitter.svg";
+import discordLogo from "../public/Discord.svg";
+import githubLogo from "../public/Github.svg";
 
 import Header from "./components/header";
-import EmailForm from "./components/emailForm";
 import Button from "./components/button";
 import Roadmap from "./components/roadmap";
 
@@ -25,35 +28,38 @@ const Home: NextPage = () => {
           content="Supercluster Labs - Accelerating the decentralized future"
         />
       </Head>
-
       <main
-        className={"bg-gradient-to-b from-[#1A253C] to-[#111827] text-white"}
+        className={"bg-gradient-to-b from-[#1A253C] to-[#111827] text-white pt-6"}
       >
-        <Header />
         <section className="container max-w-screen-xl px-6 md:px-0">
           <section className="container mx-auto">
-            <h1 className={"text-4xl md:text:6xl lg:text-8xl mb-12"}>
-              Decentralized file sharing is here.
-            </h1>
-            <p className="my-6 text-2xl leading-relaxed px:inherit">
-              Supercluster Files enables decentralized teams to share content between members - using web3 tools.
-            </p>
-            <p className="text-2xl font-bold text-slate-400">
-              Your{" "}
-              <span className="text-yellow-400">
-                decentralized organization
-              </span>{" "}
-              deserves{" "}
-              <span className="text-yellow-400">decentralized tools</span>.
-            </p>
-            <div>
-              <Button text="Sign up for early access" onClick={() => console.log("Hello")} primary />
-              <Link href="https://discord.gg/fsxmP8mR">
-                <Button text="Join our Discord" primary={false} />
+            <Header />
+            <div className="max-w-[680px]">
+              <h1 className={"text-4xl leading-loose md:text:6xl lg:text-8xl mb-12 mt-16"}>
+                Decentralized file sharing is here.
+              </h1>
+              <p className="my-6 text-2xl leading-loose px:inherit">
+                Supercluster Files enables decentralized teams to share content between members - using web3 tools.
+              </p>
+              <p className="text-2xl font-bold text-slate-400 leading-loose">
+                Your{" "}
+                <span className="text-supercluster-primary">
+                  decentralized organization
+                </span>{" "}
+                deserves{" "}
+                <span className="text-supercluster-primary">decentralized tools</span>.
+              </p>
+            </div>
+            <div className="mt-12">
+              <Link target="_blank" href="https://supercluster-labs.beehiiv.com/subscribe">
+                <Button text="Sign up for early access" onClick={() => console.log("Hello")} primary />
+              </Link>
+              <Link target="_blank" href="https://discord.gg/fsxmP8mR">
+                <Button marginLeft text="Join our Discord" primary={false} />
               </Link>
             </div>
           </section>
-          <section className="grid lg:grid-cols-3 gap-6 mt-12">
+          <section className="container grid lg:grid-cols-3 gap-6 mt-20">
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
               <h3 className="text-2xl">🌐 Built on IPFS</h3>
               <p className="text-slate-400 mt-4">
@@ -149,71 +155,112 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <div className="text-center">
-            <h4 className="text-2xl mb-4">
-              Partners
-            </h4>
-            <p className="text-slate-400"> Backed by the best in web3 </p>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-20 mt-12">
-            <div className="flex align-center">
-              <Image
-                src={outlierLogo}
-                alt="Outlier Ventures logo"
-                height={70}
-              />
+          <section className="mt-20 container">
+            <div className="text-center">
+              <h4 className="text-2xl mb-4">
+                Partners
+              </h4>
+              <p className="text-slate-400"> Backed by the best in web3 </p>
             </div>
-            <div className="flex justify-center align-center">
-              <Image
-                src={xmtpLogo}
-                alt="XMTP logo"
-                height={55}
-              />
+            <div className="grid lg:grid-cols-3 gap-20 mt-12">
+              <div className="flex align-center">
+                <Image
+                  src={outlierLogo}
+                  alt="Outlier Ventures logo"
+                  height={70}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={xmtpLogo}
+                  alt="XMTP logo"
+                  height={55}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={protocollabsLogo}
+                  alt="Protocol Labs logo"
+                  height={70}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={filecoinLogo}
+                  alt="Filecoin logo"
+                  height={70}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={banklessLogo}
+                  alt="BanklessDAO logo"
+                  height={55}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={ipfsLogo}
+                  alt="IPFS logo"
+                  height={70}
+                />
+              </div>
             </div>
-            <div className="flex justify-center align-center">
-              <Image
-                src={protocollabsLogo}
-                alt="Protocol Labs logo"
-                height={70}
-              />
-            </div>
-            <div className="flex justify-center align-center">
-              <Image
-                src={filecoinLogo}
-                alt="Filecoin logo"
-                height={70}
-              />
-            </div>
-            <div className="flex justify-center align-center">
-              <Image
-                src={banklessLogo}
-                alt="BanklessDAO logo"
-                height={55}
-              />
-            </div>
-            <div className="flex justify-center align-center">
-              <Image
-                src={ipfsLogo}
-                alt="IPFS logo"
-                height={70}
-              />
-            </div>
-          </div>
-          <div className="text-center">
-            <h4 className="text-2xl mb-4">
-              Roadmap
-            </h4>
-            <p className="text-slate-400"> We’re just getting started, and there’s a lot more coming</p>
-          </div>
-          <div className="flex mx-auto max-w-xl mt-6">
-            <Roadmap />
-          </div>
-          <section className="flex flex-col">
-            <EmailForm />
           </section>
+          <section className="mt-20 container">
+            <div className="text-center">
+              <h4 className="text-2xl mb-4">
+                Roadmap
+              </h4>
+              <p className="mb-6 text-slate-400"> We’re just getting started, and there’s a lot more coming</p>
+              <Link target="_blank" href="https://github.com/orgs/SuperclusterLabs/projects/1">
+                <Button text="View our technical roadmap" primary={false} />
+              </Link>
+            </div>
+            <div className="flex mx-auto max-w-xl mt-6">
+              <Roadmap />
+            </div>
+          </section>
+          <div className="mt-12 flex justify-center">
+            <Link target="_blank" href="https://supercluster-labs.beehiiv.com/subscribe">
+              <Button text="Sign up for early access" onClick={() => console.log("Hello")} primary />
+            </Link>
+          </div>
+        </section>
+        <section className="mt-12 container flex flex-col items-center text-center justify-center">
+          <h4 className="text-2xl mb-4">
+            Get in touch
+          </h4>
+          <p className="mb-6 text-slate-400">Find us at any of these channels</p>
+          <div className="flex gap-8">
+            <Link target="_blank" href="https://discord.gg/fsxmP8mR">
+              <Image
+                src={discordLogo}
+                alt="Discord Logo"
+              />
+            </Link>
+            <Link target="_blank" href="https://github.com/SuperclusterLabs">
+              <Image
+                src={githubLogo}
+                alt="Github Logo"
+              />
+            </Link>
+            <Link target="_blank" href="https://github.com/SuperclusterLabs">
+              <Image
+                src={twitterLogo}
+                alt="Twitter Logo"
+              />
+            </Link>
+            <Link target="_blank" href="https://cryptodon.lol/@supercluster_labs">
+              <Image
+                src={mastodonLogo}
+                alt="Mastodon Logo"
+              />
+            </Link>
+          </div>
         </section>
         <footer className="py-10 text-center text-slate-400">
-          © Supercluster Labs
+          Copyright © 2023 Supercluster Labs. All Rights Reserved
         </footer>
       </main>
     </div >
