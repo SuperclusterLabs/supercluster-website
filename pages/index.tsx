@@ -1,12 +1,23 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import superclusterLogotype from "../public/supercluster-logotype.svg";
-import banklessLogo from "../public/banklessLogo.png";
-import pattern from "../public/pattern.png";
+import Image from 'next/image';
+import Link from 'next/link';
+
+import outlierLogo from "../public/outlier-white.svg";
+import filecoinLogo from "../public/filecoin-white.png";
+import ipfsLogo from "../public/ipfs-white.png";
+import banklessLogo from "../public/bankless-white.svg";
+import xmtpLogo from "../public/xmtp-white.svg";
+import protocollabsLogo from "../public/protocollabs-white.svg";
+import mastodonLogo from "../public/Mastodon.svg";
+import twitterLogo from "../public/Twitter.svg";
+import discordLogo from "../public/Discord.svg";
+import githubLogo from "../public/Github.svg";
+import linkedInLogo from "../public/LinkedIn.svg";
 
 import Header from "./components/header";
-import EmailForm from "./components/emailForm";
+import Button from "./components/button";
+import Roadmap from "./components/roadmap";
 
 const Home: NextPage = () => {
   return (
@@ -18,67 +29,86 @@ const Home: NextPage = () => {
           content="Supercluster Labs - Accelerating the decentralized future"
         />
       </Head>
-
       <main
-        className={"bg-repeat text-white"}
-        style={{ backgroundImage: `url(${pattern.src})` }}
+        className={"bg-gradient-to-b from-[#1A253C] to-[#111827] text-white pt-6"}
       >
-        <Header />
-        <section className="container max-w-screen-lg px-6 md:px-0">
-          <section className="container mx-auto text-center">
-            <h1 className={"text-5xl md:text-7xl lg:text-9xl font-bold mb-12"}>
-              Decentralized file sharing.
-            </h1>
-            <h2 className={"text-3xl lg:text-6xl"}>Built for DAOs.</h2>
-            <p className="my-12 text-xl text-slate-400 leading-relaxed px:inherit lg:px-20">
-              Supercluster Files enables DAOs to share content between team
-              members without having to rely on centralized parties.
-            </p>
-            <p className="text-2xl font-bold text-slate-400">
-              Your{" "}
-              <span className="text-yellow-400">
-                decentralized organization
-              </span>{" "}
-              deserves{" "}
-              <span className="text-yellow-400">decentralized tools</span>.
-            </p>
+        <section className="container max-w-screen-xl px-6 md:px-0">
+          <section className="container mx-auto">
+            <Header />
+            <div className="max-w-[680px]">
+              <h1 className={"text-4xl leading-loose md:text:6xl lg:text-8xl mb-12 mt-16"}>
+                Decentralized file sharing is here.
+              </h1>
+              <p className="my-6 text-2xl leading-loose px:inherit">
+                Supercluster Files enables decentralized teams to share content between members - using web3 tools.
+              </p>
+              <p className="text-2xl font-bold text-slate-400 leading-loose">
+                Your{" "}
+                <span className="text-supercluster-primary">
+                  decentralized organization
+                </span>{" "}
+                deserves{" "}
+                <span className="text-supercluster-primary">decentralized tools</span>.
+              </p>
+            </div>
+            <div className="mt-12">
+              <Link target="_blank" href="https://supercluster-labs.beehiiv.com/subscribe">
+                <Button text="Sign up for early access" onClick={() => console.log("Hello")} primary />
+              </Link>
+              <Link target="_blank" href="https://discord.gg/fsxmP8mR">
+                <Button marginLeft text="Join our Discord" primary={false} />
+              </Link>
+            </div>
           </section>
-          <section className="grid grid-cols-2 gap-4 mt-12">
+          <section className="container grid lg:grid-cols-3 gap-6 mt-20">
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
-              <h3 className="text-2xl">Built on IPFS</h3>
+              <h3 className="text-2xl">🌐 Built on IPFS</h3>
               <p className="text-slate-400 mt-4">
                 All content is pinned and served by the IPFS network, ensuring
                 maximum decentralization.
               </p>
             </div>
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
-              <h3 className="text-2xl">NFT access control</h3>
+              <h3 className="text-2xl">🔒 Custom access control</h3>
               <p className="text-slate-400 mt-4">
-                Create custom access controls for your team members using NFTs
-                on Polygon.
+                Create custom access controls for your team members using NFTs, DAO tokens, or just a list of addresses.
               </p>
             </div>
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
-              <h3 className="text-2xl">Real-time content</h3>
+              <h3 className="text-2xl">🔑 Use your web3 identity</h3>
+              <p className="text-slate-400 mt-4">
+                Login with your web3 wallet. Share files directly using your team member’s addresses.
+              </p>
+            </div>
+            <div className="border rounded-3xl border-solid border-gray-500 p-6">
+              <h3 className="text-2xl">✉️ Real-time updates</h3>
               <p className="text-slate-400 mt-4">
                 All your team members receive real-time updates as soon as new
                 content is shared.
               </p>
             </div>
             <div className="border rounded-3xl border-solid border-gray-500 p-6">
-              <h3 className="text-2xl">Use your web3 identity</h3>
+              <h3 className="text-2xl">💻 Local-first</h3>
               <p className="text-slate-400 mt-4">
-                Login with your web3 wallet. Share files directly using your
-                team member&apos;s addresses.
+                All of your data is stored and shared directly from your local machine. Nothing is stored in the cloud, protecting your privacy.
+              </p>
+            </div>
+            <div className="border rounded-3xl border-solid border-gray-500 p-6">
+              <h3 className="text-2xl">⛔ Censorship resistant</h3>
+              <p className="text-slate-400 mt-4">
+                Your data is yours. You’re protected from having any data or content deleted at the platform level.
               </p>
             </div>
           </section>
           <section className="md:container md:mx-auto mt-12 mb-9">
-            <h4 className="text-xl text-yellow-400 font-bold text-center">
-              How it works
-            </h4>
-            <div className="columns-1 sm:columns-3 gap-8 space-y-8 mt-8">
-              <div className="p-7 bg-gray-800 rounded-3xl">
+            <div className="text-center">
+              <h4 className="text-2xl mb-4">
+                How it works
+              </h4>
+              <p className="text-slate-400"> Supercluster Files uses web3 native protocols under the hood </p>
+            </div>
+            <div className="grid lg:grid-cols-3 gap-6 mt-8 leading-relaxed">
+              <div className="p-7 bg-gray-800 rounded-3xl h-full flex flex-col">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">1</h1>
                 </div>
@@ -92,9 +122,9 @@ const Home: NextPage = () => {
                 <p className="mb-6">
                   Invites are sent out via ENS / ETH address
                 </p>
-                <p>Access control dictated by NFT ownership</p>
+                <p>Access control dictated by your custom access controls set up for your cluster</p>
               </div>
-              <div className="p-7 bg-gray-800 rounded-3xl">
+              <div className="p-7 bg-gray-800 rounded-3xl h-full flex flex-col">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">2</h1>
                 </div>
@@ -109,7 +139,7 @@ const Home: NextPage = () => {
                 </p>
                 <p>New files are automatically pinned to IPFS by members</p>
               </div>
-              <div className="p-7 bg-gray-800 rounded-3xl">
+              <div className="p-7 bg-gray-800 rounded-3xl h-full flex flex-col">
                 <div className="heading-number text-center mx-auto">
                   <h1 className="font-bold text-2xl text-emerald-500">3</h1>
                 </div>
@@ -126,33 +156,121 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <section className="md:container md:mx-auto mt-12 mb-4">
-            <h4 className="text-xl text-yellow-400 font-bold text-center mb-8">
-              Our partners
-            </h4>
-            <div className="flex flex-col justify-center">
-              <div className="self-center">
+          <section className="mt-20 container">
+            <div className="text-center">
+              <h4 className="text-2xl mb-4">
+                Partners
+              </h4>
+              <p className="text-slate-400"> Backed by the best in web3 </p>
+            </div>
+            <div className="grid lg:grid-cols-3 gap-20 mt-12">
+              <div className="flex align-center">
                 <Image
-                  src={banklessLogo}
-                  alt="BanklessDAO Logo"
-                  height={207}
-                  width={271}
+                  src={outlierLogo}
+                  alt="Outlier Ventures logo"
+                  height={70}
                 />
               </div>
-              <h3 className="font-bold text-2xl text-center mt-2">
-                Bankless DAO
-              </h3>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={xmtpLogo}
+                  alt="XMTP logo"
+                  height={55}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={protocollabsLogo}
+                  alt="Protocol Labs logo"
+                  height={70}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={filecoinLogo}
+                  alt="Filecoin logo"
+                  height={70}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={banklessLogo}
+                  alt="BanklessDAO logo"
+                  height={55}
+                />
+              </div>
+              <div className="flex justify-center align-center">
+                <Image
+                  src={ipfsLogo}
+                  alt="IPFS logo"
+                  height={70}
+                />
+              </div>
             </div>
           </section>
-          <section className="flex flex-col">
-            <EmailForm />
+          <section className="mt-20 container">
+            <div className="text-center">
+              <h4 className="text-2xl mb-4">
+                Roadmap
+              </h4>
+              <p className="mb-6 text-slate-400"> We’re just getting started, and there’s a lot more coming</p>
+              <Link target="_blank" href="https://github.com/orgs/SuperclusterLabs/projects/1">
+                <Button text="View our technical roadmap" primary={false} />
+              </Link>
+            </div>
+            <div className="flex mx-auto max-w-xl mt-6">
+              <Roadmap />
+            </div>
           </section>
+          <div className="mt-12 flex justify-center">
+            <Link target="_blank" href="https://supercluster-labs.beehiiv.com/subscribe">
+              <Button text="Sign up for early access" onClick={() => console.log("Hello")} primary />
+            </Link>
+          </div>
+        </section>
+        <section className="mt-12 container flex flex-col items-center text-center justify-center">
+          <h4 className="text-2xl mb-4">
+            Get in touch
+          </h4>
+          <p className="mb-6 text-slate-400">Find us at any of these channels</p>
+          <div className="flex gap-8">
+            <Link target="_blank" href="https://discord.gg/fsxmP8mR">
+              <Image
+                src={discordLogo}
+                alt="Discord Logo"
+              />
+            </Link>
+            <Link target="_blank" href="https://github.com/SuperclusterLabs">
+              <Image
+                src={githubLogo}
+                alt="Github Logo"
+              />
+            </Link>
+            <Link target="_blank" href="https://github.com/SuperclusterLabs">
+              <Image
+                src={twitterLogo}
+                alt="Twitter Logo"
+              />
+            </Link>
+            <Link target="_blank" href="https://cryptodon.lol/@supercluster_labs">
+              <Image
+                src={mastodonLogo}
+                alt="Mastodon Logo"
+              />
+            </Link>
+            <Link target="_blank" href="https://www.linkedin.com/company/supercluster-labs/">
+              <Image
+                src={linkedInLogo}
+                alt="LinkedIn Logo"
+              />
+            </Link>
+          </div>
         </section>
         <footer className="py-10 text-center text-slate-400">
-          © Supercluster Labs
+          Copyright © 2023 Supercluster Labs. All Rights Reserved
         </footer>
       </main>
-    </div>
+    </div >
   );
 };
 
