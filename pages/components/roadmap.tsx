@@ -19,7 +19,7 @@ export default function Roadmap() {
         <div className="absolute w-3 h-3 bg-emerald-900 rounded-full mt-1.5 -left-1.5"></div>
         <time className="font-bold leading-none">Q2 2023</time>
         <h3 className="mt-2 text-2xl">Product launch</h3>
-        <p className="mt-2 text-slate-400 leading-relaxed">We’re planning to fully launch our product in early Q2. We’d love to get you on the list and get your feedback. <Link target="_blank" href="google.com"><span className="underline underline-offset-4 text-supercluster-primary"> Sign up here!</span></Link></p>
+        <p className="mt-2 text-slate-400 leading-relaxed">We’re planning to fully launch our product in early Q2. We’d love to get you on the list and get your feedback. <Link target="_blank" href="https://supercluster-labs.beehiiv.com/subscribe"><span className="underline underline-offset-4 text-supercluster-primary"> Sign up here!</span></Link></p>
       </li>
       <li className="mb-10 ml-4">
         <div className="absolute w-3 h-3 bg-emerald-900 rounded-full mt-1.5 -left-1.5"></div>
