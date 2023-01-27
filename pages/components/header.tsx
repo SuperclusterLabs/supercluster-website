@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SuperclusterLogo from "../../public/supercluster-logotype.svg";
-import Button from "./button";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -9,11 +9,12 @@ export default function Header() {
         src={SuperclusterLogo}
         alt="Supercluster Labs Logo"
       />
-      <button
-        className={`hidden md:block px-7 py-5 font-bold rounded-full drop-shadow bg-supercluster-primary text-black`}
-        onClick={() => console.log("hello")}>
-        Get early access
-      </button>
+      <Link target="_blank" href="https://supercluster-labs.beehiiv.com/subscribe">
+        <button
+          className={`hidden md:block px-7 py-5 font-bold rounded-full drop-shadow bg-supercluster-primary text-black`}>
+          Get early access
+        </button>
+      </Link>
     </header>
   );
 }
