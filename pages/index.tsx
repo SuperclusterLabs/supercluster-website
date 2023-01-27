@@ -1,9 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from 'next/image';
+import Link from 'next/link';
+
+import outlierLogo from "../public/outlier-white.svg";
+import filecoinLogo from "../public/filecoin-white.png";
+import ipfsLogo from "../public/ipfs-white.png";
+import banklessLogo from "../public/bankless-white.svg";
+import xmtpLogo from "../public/xmtp-white.svg";
+import protocollabsLogo from "../public/protocollabs-white.svg";
 
 import Header from "./components/header";
 import EmailForm from "./components/emailForm";
 import Button from "./components/button";
+import Roadmap from "./components/roadmap";
 
 const Home: NextPage = () => {
   return (
@@ -38,7 +48,9 @@ const Home: NextPage = () => {
             </p>
             <div>
               <Button text="Sign up for early access" onClick={() => console.log("Hello")} primary />
-              <Button text="Join our Discord" onClick={() => console.log("Joining Discord")} primary={false} />
+              <Link href="https://discord.gg/fsxmP8mR">
+                <Button text="Join our Discord" primary={false} />
+              </Link>
             </div>
           </section>
           <section className="grid lg:grid-cols-3 gap-6 mt-12">
@@ -143,6 +155,59 @@ const Home: NextPage = () => {
             </h4>
             <p className="text-slate-400"> Backed by the best in web3 </p>
           </div>
+          <div className="grid lg:grid-cols-3 gap-20 mt-12">
+            <div className="flex align-center">
+              <Image
+                src={outlierLogo}
+                alt="Outlier Ventures logo"
+                height={70}
+              />
+            </div>
+            <div className="flex justify-center align-center">
+              <Image
+                src={xmtpLogo}
+                alt="XMTP logo"
+                height={55}
+              />
+            </div>
+            <div className="flex justify-center align-center">
+              <Image
+                src={protocollabsLogo}
+                alt="Protocol Labs logo"
+                height={70}
+              />
+            </div>
+            <div className="flex justify-center align-center">
+              <Image
+                src={filecoinLogo}
+                alt="Filecoin logo"
+                height={70}
+              />
+            </div>
+            <div className="flex justify-center align-center">
+              <Image
+                src={banklessLogo}
+                alt="BanklessDAO logo"
+                height={55}
+              />
+            </div>
+            <div className="flex justify-center align-center">
+              <Image
+                src={ipfsLogo}
+                alt="IPFS logo"
+                height={70}
+              />
+            </div>
+          </div>
+          <div className="text-center">
+            <h4 className="text-2xl mb-4">
+              Roadmap
+            </h4>
+            <p className="text-slate-400"> We’re just getting started, and there’s a lot more coming</p>
+          </div>
+          <div className="flex mx-auto max-w-xl mt-6">
+            <Roadmap />
+          </div>
           <section className="flex flex-col">
             <EmailForm />
           </section>
@@ -151,7 +216,7 @@ const Home: NextPage = () => {
           © Supercluster Labs
         </footer>
       </main>
-    </div>
+    </div >
   );
 };
 
