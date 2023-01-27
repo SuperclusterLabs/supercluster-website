@@ -13,6 +13,7 @@ import mastodonLogo from "../public/Mastodon.svg";
 import twitterLogo from "../public/Twitter.svg";
 import discordLogo from "../public/Discord.svg";
 import githubLogo from "../public/Github.svg";
+import linkedInLogo from "../public/LinkedIn.svg";
 
 import Header from "./components/header";
 import Button from "./components/button";
@@ -255,6 +256,12 @@ const Home: NextPage = () => {
               <Image
                 src={mastodonLogo}
                 alt="Mastodon Logo"
+              />
+            </Link>
+            <Link target="_blank" href="https://www.linkedin.com/company/supercluster-labs/">
+              <Image
+                src={linkedInLogo}
+                alt="LinkedIn Logo"
               />
             </Link>
           </div>
