@@ -14,6 +14,8 @@ import twitterLogo from "../public/Twitter.svg";
 import discordLogo from "../public/Discord.svg";
 import githubLogo from "../public/Github.svg";
 import linkedInLogo from "../public/LinkedIn.svg";
+import kaiProfile from "../public/kai-profile.jpg";
+import govProfile from "../public/gov-profile.jpg";
 
 import Header from "./components/header";
 import Button from "./components/button";
@@ -227,8 +229,90 @@ const Home: NextPage = () => {
               <Button text="Sign up for early access" onClick={() => console.log("Hello")} primary />
             </Link>
           </div>
+          <section className="mt-20 container text-center">
+            <h4 className="text-2xl mb-4">
+              Our team
+            </h4>
+            <p className="mb-6 text-slate-400">Meet our core team members</p>
+            <div className="grid lg:grid-cols-2 gap-20">
+              <div className="flex gap-6">
+                <div>
+                  <Image
+                    src={kaiProfile}
+                    alt="Kai Huang profile"
+                    height={200}
+                    style={{ borderRadius: 24 }}
+                  />
+                </div>
+                <div className="flex flex-col gap-2 w-2/3 text-left">
+                  <h4 className="text-2xl">Kai Huang</h4>
+                  <div className="flex flex-row gap-4">
+                    <Link
+                      target="_blank"
+                      href="https://www.linkedin.com/in/kai-huang-79659b41/"
+                    >
+                      <Image
+                        src={linkedInLogo}
+                        alt="LinkedIn logo"
+                        height={20}
+                      />
+                    </Link>
+                    <Link
+                      target="_blank"
+                      href="https://twitter.com/KaiHuang"
+                    >
+                      <Image
+                        src={twitterLogo}
+                        alt="Twitter logo"
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                  <h5 className="text-slate-400">CEO & Cofounder</h5>
+                  <p>Kai previously worked as a product lead at MetaMask, the leading web3 wallet in the ecosystem today. Since 2020, Kai has participated as a core contributor in various DAOs, including BanklessDAO and RadicleDAO. Prior to web3, he was leading the payments strategy at REI, Inc.</p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <div className="rounded-3xl">
+                  <Image
+                    src={govProfile}
+                    alt="Govind Mohan profile"
+                    height={200}
+                    style={{ borderRadius: 24 }}
+                  />
+                </div>
+                <div className="flex flex-col gap-2 w-2/3 text-left">
+                  <h4 className="text-2xl">Govind Mohan</h4>
+                  <div className="flex flex-row gap-4">
+                    <Link
+                      target="_blank"
+                      href="https://www.linkedin.com/in/govindmohan218/"
+                    >
+                      <Image
+                        src={linkedInLogo}
+                        alt="LinkedIn logo"
+                        height={20}
+                      />
+                    </Link>
+                    <Link
+                      target="_blank"
+                      href="https://twitter.com/_gov218"
+                    >
+                      <Image
+                        src={twitterLogo}
+                        alt="Twitter logo"
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                  <h5 className="text-slate-400">CTO & Cofounder</h5>
+                  <p>Govind is a blockchain developer and researcher who has been in the space since 2014. He has been involved with several start-ups, notably starting Virgil Systems in 2018 where he was developing P2P data storage systems for governments with a strong focus on data integrity and availability. Since 2022, he has done work for various DAOs and open source communities.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
-        <section className="mt-12 container flex flex-col items-center text-center justify-center">
+        <section className="mt-20 container flex flex-col items-center text-center justify-center">
           <h4 className="text-2xl mb-4">
             Get in touch
           </h4>
