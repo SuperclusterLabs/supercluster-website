@@ -338,10 +338,10 @@ const Home: NextPage = () => {
             <Link target="_blank" href="https://discord.gg/fsxmP8mR">
               <Image src={discordLogo} alt="Discord Logo" />
             </Link>
-            <Link target="_blank" href="https://twitter.com/superclusterdev">
+            <Link target="_blank" href="https://github.com/SuperclusterLabs">
               <Image src={githubLogo} alt="Github Logo" />
             </Link>
-            <Link target="_blank" href="https://github.com/SuperclusterLabs">
+            <Link target="_blank" href="https://twitter.com/superclusterdev">
               <Image src={twitterLogo} alt="Twitter Logo" />
             </Link>
             <Link
