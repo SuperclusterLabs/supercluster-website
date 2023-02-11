@@ -335,7 +335,7 @@ const Home: NextPage = () => {
             Find us at any of these channels
           </p>
           <div className="flex gap-8">
-            <Link target="_blank" href="https://discord.gg/MXgNJERv">
+            <Link target="_blank" href="https://discord.gg/T49E27Tdtu">
               <Image src={discordLogo} alt="Discord Logo" />
             </Link>
             <Link target="_blank" href="https://github.com/SuperclusterLabs">
