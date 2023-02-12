@@ -74,7 +74,7 @@ const Home: NextPage = () => {
                   primary
                 />
               </Link>
-              <Link target="_blank" href="https://discord.gg/fsxmP8mR">
+              <Link target="_blank" href="https://discord.gg/T49E27Tdtu">
                 <Button marginLeft text="Join our Discord" primary={false} />
               </Link>
             </div>
