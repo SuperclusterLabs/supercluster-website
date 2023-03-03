@@ -1,8 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import HomePage from "./home";
 import Layout from "../components/Layout";
+
+import {
+  Header,
+  Features,
+  HowTo,
+  Partners,
+  SignUpForm,
+} from '../components/home'
+
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +22,13 @@ const Home: NextPage = () => {
           content="Supercluster Labs - Accelerating the decentralized future"
         />
       </Head>
-      <HomePage />
+      <div className="container max-w-screen-xl  md:px-0">
+        <Header />
+        <Features />
+        <HowTo />
+        <Partners />
+        <SignUpForm />
+      </div>
     </>
   );
 };
