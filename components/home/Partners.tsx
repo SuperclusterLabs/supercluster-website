@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import protocolLabsLogo from "../../public/static/images/protocollabs-white.svg";
 import outlierLogo from "../../public/static/images/outlier-white.svg";

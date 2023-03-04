@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
 
 export const Header = () => {
   return (
     <section className="container mx-auto">
-      <div className="">
+      <div>
         <h1 className="w-8/12 text-4xl leading-loose md:text:6xl lg:text-7xl mb-12 mt-16">
           About Supercluster Labs.
         </h1>
@@ -16,7 +15,7 @@ export const Header = () => {
           </span>
         </p>
       </div>
-      <div className="mt-10">
+      <div className="mt-28">
         <Link
           target="_blank"
           href="https://supercluster-labs.beehiiv.com/subscribe"
@@ -26,9 +25,6 @@ export const Header = () => {
             onClick={() => console.log("Hello")}
             primary 
           />
-        </Link>
-        <Link target="_blank" href="https://discord.gg/T49E27Tdtu">
-          <Button marginLeft text="Join our Discord" primary={false} />
         </Link>
       </div>
     </section>

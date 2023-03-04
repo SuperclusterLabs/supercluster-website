@@ -16,3 +16,15 @@
     @apply bg-emerald-900;
   }
 }
+
+.roadMap-w1 {
+  width: 54.3%;
+}
+
+.roadMap-w2 {
+  width: 46%;
+}
+
+.roadMap-marginTop {
+  margin-top: -35px;
+}

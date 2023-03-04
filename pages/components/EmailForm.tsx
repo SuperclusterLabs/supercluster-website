@@ -4,7 +4,7 @@ export default function EmailForm() {
       <p className="text-center text-xl">Subscribe for updates</p>
       <form
         className="w-full max-w-sm mt-4"
-        action="/"
+        action="https://getform.io/f/fdb80384-b894-46d2-acd6-7dc455b8555d"
         method="POST"
         acceptCharset="UTF-8"
       >
